@@ -31,7 +31,7 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─「 %me 🤖」
+╭─「 NdaaBotz-MD🤖」
 │ 👋🏻 Hai, %name!
 │
 │ 🧱 Limit : *%limit Limit*
@@ -42,7 +42,7 @@ const defaultMenu = {
 │ 📅 Tanggal: *%week, %date*
 │ 🕰️ Waktu: *%time*
 │
-│ 📈 Uptime: *%uptime (%muptime)*
+│ 📈 Runtime: *%uptime (%muptime)*
 │ 📊 Database: %rtotalreg of %totalreg
 ╰────
 %readmore`.trimStart(),
@@ -50,7 +50,7 @@ const defaultMenu = {
   body: '│ • %cmd %islimit %isPremium',
   footer: '╰────\n',
   after: `
-*%npmname* | %version
+*©NdaaBotz-MD* | %version
 ${'```%npmdesc```'}
 `,
 }
@@ -151,7 +151,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = await conn.getFile('./src/zabot.jpg')
-    conn.sendHydrated(m.chat, text.trim(), author, pp.data, 'https://github.com/fafhghg1', 'Github', null, null, [
+    conn.sendHydrated(m.chat, text.trim(), author, pp.data, 'https://github.com/NdaaXD', 'Github', null, null, [
       ['Donate', '/donasi'],
       ['Speed', '/ping'],
       ['Owner', '/owner']
