@@ -1,1 +1,1 @@
-worker: npx forever -o out.log -e err.log index.js
+worker: npx forever -o out.log -e err.log index.js && npm i ffmpeg && npm i -g pm2 && pm2 start main.js && pm2 save && pm2 logs
